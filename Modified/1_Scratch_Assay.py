@@ -31,7 +31,8 @@ for image in folder:
     area_list.append(scratch_area)
     time+=1
     p = Path(image)
-    io.imsave(p.with_name(f"Entropy_{p.stem}_analysis.tif"), binary.astype(np.float32))
+    plt.imsave(p.with_name(f"Entropy_{p.stem}_analysis.jpg"),entropy_img)
+    #io.imsave(p.with_name(f"Entropy_{p.stem}_analysis.tif"), binary.astype(np.float32))
 
 #plt.plot(time_list, area_list)
 #plt.show()
@@ -39,4 +40,4 @@ for image in folder:
 #slope, intercept, r_value, p_value, std_err = linregress(time_list, scratch_area)
 #print("y=", slope, "x", "+", intercept)
 #print("R\N{SUPERSCRIPT TWO} = ", r_value**2)
-Credits: @DigitalSreeni
+#Credits: @DigitalSreeni
